@@ -19,8 +19,8 @@ import sys
 import dns.resolver
 import time
 
-def main():
-    
+def main(**kwargs):
+
     # Arguments
     class MyParser(argparse.ArgumentParser):
         def error(self, message):
@@ -31,12 +31,12 @@ def main():
     parser = MyParser()
     parser.add_argument('foo', nargs='+')
     args = parser.parse_args()
-    
+
     #print(args)
-    
+
     #arguments = len(sys.argv)
     #print(arguments)
-    
+
     # DNS resolve routine
     def_resolver = dns.resolver.Resolver()
     def_resolver.nameservers = ['172.30.20.107']
@@ -46,7 +46,7 @@ def main():
     print(echo_intervall)
     # count variable in while-loop
     i = 0
-    
+
     # First Line Print for script
     print('DNS Echo every 1 second')
     while True:
