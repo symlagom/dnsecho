@@ -59,6 +59,4 @@ def main(**kwargs):
 
 # Main
 if __name__ == "__main__":
-    #echo_intervall = 2
-    #main(echo_intervall)
     main()
